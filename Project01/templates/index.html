@@ -1,0 +1,39 @@
+{%extends "bootstrap/base.html" %}
+
+{% block content %}
+<!-- Main Content Is Here -->
+     <div class="container">
+      <div class="jumbotron">
+         <h1 class="display-3"> Data App  </h1>
+          <p>Upload and show data</p>
+          <p><a href="{{ url_for('index')}}" type="button" class="btn btn-primary" > Refresh</a></p>
+        </div>
+      
+
+      <div class="container">
+        <form method=POST enctype=multipart/form-data action="{{ url_for('datauploads') }}" class="form-group">
+          <div class="form-group">
+          <input type="file" name="csv_data">
+          <input type="submit" class="btn btn-primary mb-2"> 
+          <input type="reset" value="Reset" class="btn btn-danger mb-2">
+        </form>
+                    
+     </div> 
+    
+    </div>     
+    
+ 
+
+{% endblock %}
+
+<!-- Main External 3-Party JS Is Here -->
+
+{% block scripts %}
+
+{{ super() }} 
+
+
+
+{% endblock%}
+
+

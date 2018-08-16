@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data Details</title>
+  </head>
+  <body>
+    <h2>Results</h2>
+    {{filename}}
+    <div class="container">
+      {{df_table.to_html(classes="table table-striped
+      table-hover",na_rep="_")|safe }}
+
+</body>
+</html>
